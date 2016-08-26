@@ -31,19 +31,6 @@ Order in which the relays should switch on (for MSR complete): 1,2,4,3,1
                 });
                 });
 
-
-            function set_status(latest){
-                console.log(latest.degaussing_state.value);
-                if (latest.degaussing_state.value === 0) {
-                    $('.control-status').removeClass("nedm-status-g");
-                    $('.control-status').addClass("nedm-status-r");
-                }
-                if (latest.degaussing_state.value == 1) {
-                    $('.control-status').removeClass("nedm-status-r");
-                    $('.control-status').addClass("nedm-status-g");
-                }
-            }
-
             function update_status(vars) {
                 var session = editor.session;
                 if ("degaussing_state" in vars) {
@@ -62,7 +49,7 @@ Order in which the relays should switch on (for MSR complete): 1,2,4,3,1
                     session.insert({
                         row: session.getLength(),
                         column: 0}, 
-                        "Running: "+(vars.degaussing_state.value === 1) +"\\n");
+                        "Currently in progress: "+(vars.degaussing_state.value === 1) +"\\n");
                 }
                 if ("state_0" in vars) {
                     if (vars.state_0.value === 0) {outp = "Open";}

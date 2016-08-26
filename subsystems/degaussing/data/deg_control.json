@@ -36,6 +36,8 @@
                     <label for='rb_set1a'>MSR inner layer</label>
                     <input type='radio' name='rb_coilset' id='rb_set2a' value='msr_all' checked='checked'>
                     <label for='rb_set2a'>MSR complete</label>
+                    <input type='radio' name='rb_coilset' id='rb_set6a' value='harbin_standard'>
+                    <label for='rb_set6a'>Harbin Prototype X,Z,Y</label>
                     <input type='radio' name='rb_coilset' id='rb_set3a' value='insert_all'>
                     <label for='rb_set3a'>Insert complete (w/o cylinder)</label>
                     <input type='radio' name='rb_coilset' id='rb_set4a' value='insert_inner'>
